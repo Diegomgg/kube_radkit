@@ -3,7 +3,7 @@ FROM dockerhub.cisco.com/docker.io/python:${PYTHON_VERSION}-slim
 WORKDIR /
 ENV RADKIT_DIRECTORY="/radkit"
 
-COPY wheels3/ wheels/
+COPY wheels/ wheels/
 COPY start.sh start.sh
 
 RUN apt update && apt upgrade -y && python3 -m pip install -U pip
